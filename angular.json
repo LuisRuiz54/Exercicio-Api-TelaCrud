@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "DesafioDti"
+    }
+  },
+  "defaultProject": "DesafioDti",
+  "cli": {
+    "analytics": "b895e3a0-adce-4c39-bd3a-861e9263684f"
+  }
 }

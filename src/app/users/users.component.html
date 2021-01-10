@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h2>Clientes</h2>
+        </div>
+
+<div class="card-body">
+<table class="table table-hover" *ngIf="responseUsers">
+    <thead>
+            <th>ID</th>
+            <th>NOME</th>
+            <th>ENDEREÇO</th>
+            <th>EMAIL</th>
+            <th>CPF</th>
+    </thead>
+  <tbody>
+    <tr *ngFor="let user of responseUsers.data">
+        <td>{{user.id}}</td>
+        <td>{{user.first_name}}</td>
+        <td>{{user.last_name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.avatar}}</td>
+        <td>
+            <button routerLink="/users/update/{{user.id}}" class="btn btn-warning">Editar</button>
+        </td>
+        <td>
+            <button routerLink="/users/delete/{{user.id}}" class="btn btn-danger">Apagar</button>
+        </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
